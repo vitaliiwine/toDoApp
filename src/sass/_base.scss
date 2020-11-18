@@ -14,7 +14,13 @@ $clear-button-color: #9f6060;
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
   color: $default-font-color;
   width: 100%;
   min-height: 100%;
@@ -26,6 +32,10 @@ html, body {
 body {
   padding: 20px;
   background-color: $background-color;
+}
+
+h1 {
+  margin: 0;
 }
 
 section {

@@ -1,4 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
   color: #000;
   width: 100%;
   min-height: 100%;
@@ -12,6 +18,10 @@ html, body {
 body {
   padding: 20px;
   background-color: #4a90e2;
+}
+
+h1 {
+  margin: 0;
 }
 
 section {
@@ -40,7 +50,90 @@ section {
 .button:hover,
 .button:focus {
   filter: brightness(120%);
-  box-shadow: 4px 2px 5px #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.new-item-entry {
+  position: sticky;
+  top: 0;
+  margin-bottom: 1rem;
+  scroll-padding-inline: 0.75rem;
+}
+.new-item-entry form {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.new-item-entry form label {
+  position: absolute;
+  left: -10000px;
+}
+.new-item-entry form input[type=text] {
+  width: 80%;
+  font-size: 1.25rem;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  padding: 0.75rem;
+  outline: none;
+}
+.new-item-entry form input[type=text]:focus,
+.new-item-entry form input[type=text]:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.new-item-entry form button {
+  font-size: 1.25rem;
+  background-color: #4caf50;
+  padding: 0.75rem;
+}
+@media only screen and (min-width: 768px) {
+  .new-item-entry form button {
+    font-size: 1.5rem;
+  }
+}
+
+.list-container {
+  min-height: 60vh;
+  padding: 0.75rem;
+}
+.list-container .list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.list-container .list-title button {
+  font-size: 1rem;
+  background-color: #9f6060;
+  padding: 0 0.1rem;
+  margin-top: 0.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .list-container .list-title button {
+    padding: 0 0.5rem;
+  }
+}
+.list-container .list-title hr {
+  width: 100%;
+}
+.list-container .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 1rem;
+}
+.list-container .item input[type=checkbox] {
+  text-align: center;
+  width: 2.5rem;
+  min-width: 48px;
+  height: 2.5rem;
+  min-height: 48px;
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+.list-container .item input[type=checkbox]:focus + label {
+  text-decoration: underline;
+}
+.list-container .item label {
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
