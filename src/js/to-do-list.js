@@ -11,7 +11,7 @@ export default class ToDoList {
     this._list = [];
   }
 
-  addItemToLIst(itemObj) {
+  addItemToList(itemObj) {
     this._list.push(itemObj);
   }
 
